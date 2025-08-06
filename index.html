@@ -30,7 +30,7 @@
             background: url('https://i.imgur.com/vOiWKuv.png') right center no-repeat;
             background-size: 650px auto; /* Width first, height auto-adjusts */
             color: black;
-            padding: 90px 0;
+            padding: 100px 0;
             position: relative;
             overflow: hidden;
         }
@@ -303,11 +303,22 @@
         }
 
         .project-image {
-            height: 250px;
-            background: linear-gradient(45deg, #00b4d8, #0077b6);
+            height: 400px;
+            background: white;
             position: relative;
             overflow: hidden;
+
+            display: flex;                  /* make it a flex container */
+            justify-content: center;       /* center image horizontally */
+            align-items: center;           /* center image vertically */
         }
+
+        .project-image img {
+            height: 100%;
+            width: auto;
+            object-fit: contain;
+        }
+
 
         .project-image::before {
             content: '';
@@ -541,28 +552,14 @@
                             <img src="https://seekvectors.com/files/download/Purdue%20Boilermakers.png" alt="Maanav Shah">
                         </div>
                     </div>
-                    
-                    <div class="stats">
-                        <div class="stat">
-                            <div class="stat-number">2nd</div>
-                            <div>Year Student</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">5</div>
-                            <div>Robotics Projects</div>
-                        </div>
-                        <div class="stat">
-                            <div class="stat-number">3.6</div>
-                            <div>GPA</div>
-                        </div>
-                    </div>
                 </div>
                 
                 <div class="about-text">
-                    <p>I'm a sophomore Computer Engineering student at Purdue University with a deep passion for robotics and autonomous systems. My journey began with curiosity about how machines can perceive and interact with the world, leading me to explore everything from basic motor control to advanced computer vision.</p>
-                    
+                    <p>I'm a sophomore Computer Engineering student at Purdue University with a deep passion for robotics and autonomous systems.</p>
+                    <br>
                     <p>Through hands-on projects and coursework, I've developed strong foundations in embedded systems, control theory, and machine learning. I'm particularly interested in the intersection of hardware and software in robotic applications.</p>
-                    
+                    <br>
+                    <p>Outside of class and engineering, I love playing basketball, hiking, and going camping with friends. It’s a way for me to get outside and stay active. I’m also really into stocks and futures trading.</p>
                     <div class="skills">
                         <span class="skill-tag">C/C++</span>
                         <span class="skill-tag">Python</span>
@@ -585,15 +582,18 @@
             <div class="projects-grid">
                 <div class="project-card fade-in">
                     <div class="project-image">
+                        <img src="https://i.imgur.com/qlzwvXf.png" alt="Maanav Shah">
                     </div>
                     <div class="project-content">
-                        <h3 class="project-title">LiDAR + SLAM Food Delivery Robot: Fetchr</h3>
-                        <p class="project-description">Built a differential drive robot using Arduino and IR sensors that can navigate complex paths autonomously. Implemented PID control for smooth cornering and obstacle avoidance using ultrasonic sensors.</p>
+                        <h3 class="project-title">LiDAR + SLAM Food Delivery Robot: Fetchr (IN PROGRESS)</h3>
+                        <p class="project-description">Custom CAD & CNC machined mobile robot integrating LiDAR, SLAM, and autonomous planning for food delivery using Raspberry Pi 4</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Arduino</span>
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Sensor Fusion</span>
+                            <span class="tech-tag">Raspberry Pi 4</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">LiDAR</span>
+                            <span class="tech-tag">SLAM</span>
+                            <span class="tech-tag">CAD</span>
+                            <span class="tech-tag">Laser Cutting</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Code</a>
@@ -603,33 +603,38 @@
                 </div>
 
                 <div class="project-card fade-in">
-                    <div class="project-image"></div>
+                    <div class="project-image">
+                        <img src="https://i.imgur.com/zgLyvI2.png" alt="Maanav Shah">
+                    </div>
                     <div class="project-content">
                         <h3 class="project-title">Smart Dorm Door Opener w/ Mobile App Pairing: NoKey</h3>
-                        <p class="project-description">Developed a robotic arm system that uses computer vision to identify and sort objects by color and shape. Integrated OpenCV with a 6-DOF robotic arm for precise manipulation tasks.</p>
+                        <p class="project-description">Smart dorm door opener with Bluetooth enabled mobile web app for keyless entry using ESP32</p>
                         <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">OpenCV</span>
-                            <span class="tech-tag">ROS</span>
-                            <span class="tech-tag">Servo Control</span>
+                            <span class="tech-tag">Arduino</span>
+                            <span class="tech-tag">ESP32</span>
+                            <span class="tech-tag">Breadboard</span>
+                            <span class="tech-tag">Motor Controller</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Code</a>
+                            <a href="https://github.com/maanavjugalshah/NoKey" class="project-link">View Code</a>
                             <a href="#" class="project-link">Demo Video</a>
                         </div>
                     </div>
                 </div>
 
                 <div class="project-card fade-in">
-                    <div class="project-image"></div>
+                    <div class="project-image">
+                        <img src="https://i.imgur.com/A1Oqg8J.png" alt="Maanav Shah">
+                    </div>
                     <div class="project-content">
-                        <h3 class="project-title">360° Turret Laser integrated w/ OpenAI API: AutoAIM</h3>
-                        <p class="project-description">Designed and implemented a custom flight controller for a quadcopter using IMU sensors and PID loops. Achieved stable hover and basic autonomous flight patterns with wireless control interface.</p>
+                        <h3 class="project-title">360° Turret Laser integrated w/ OpenAI API: AutoAIM (IN PROGRESS)</h3>
+                        <p class="project-description">360° turret laser system integrated with Gemini API and YOLOv8 for real-time target generation and autonomous aiming using Raspberry Pi 4</p>
                         <div class="project-tech">
-                            <span class="tech-tag">C++</span>
-                            <span class="tech-tag">IMU Integration</span>
-                            <span class="tech-tag">PID Control</span>
-                            <span class="tech-tag">Wireless Comm</span>
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">YOLOv8</span>
+                            <span class="tech-tag">Raspberry Pi 4</span>
+                            <span class="tech-tag">CNC Machining</span>
+                            <span class="tech-tag">CAD</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">View Code</a>
@@ -642,34 +647,17 @@
                     <div class="project-image"></div>
                     <div class="project-content">
                         <h3 class="project-title">OpenCV 3D Printer Homework Writer: ScribeAI</h3>
-                        <p class="project-description">Built a mobile robot capable of simultaneous localization and mapping using LiDAR and wheel encoders. Implemented particle filter algorithms for robust navigation in unknown environments.</p>
+                        <p class="project-description">Full-Stack AI tool that converts user handwritten character samples into 3D printer-ready G-code and writes Gemini produced text in pen using computer vision, Gemini API, and a custom Flask interface</p>
                         <div class="project-tech">
-                            <span class="tech-tag">ROS</span>
+                            <span class="tech-tag">OpenCV</span>
                             <span class="tech-tag">Python</span>
-                            <span class="tech-tag">LiDAR</span>
-                            <span class="tech-tag">SLAM</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">3D Printer Ender 3</span>
+                            <span class="tech-tag">G-Code</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">View Code</a>
+                            <a href="https://github.com/maanavjugalshah/ScribeAI" class="project-link">View Code</a>
                             <a href="#" class="project-link">Mapping Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card fade-in">
-                    <div class="project-image"></div>
-                    <div class="project-content">
-                        <h3 class="project-title">OpenCV Gesture Controlled Robotic Hand: HandWave</h3>
-                        <p class="project-description">Created a mobile assistant robot that responds to voice commands and can perform tasks like object retrieval and room navigation. Integrated speech recognition with natural language processing for intuitive interaction.</p>
-                        <div class="project-tech">
-                            <span class="tech-tag">Python</span>
-                            <span class="tech-tag">Speech Recognition</span>
-                            <span class="tech-tag">NLP</span>
-                            <span class="tech-tag">Raspberry Pi</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">View Code</a>
-                            <a href="#" class="project-link">Voice Demo</a>
                         </div>
                     </div>
                 </div>
